@@ -42,7 +42,7 @@ function attrFunctionNS(fullname, value) {
 
 export default function(name, value) {
   var fullname = namespace(name);
-
+  console.log(name,value);
   if (arguments.length < 2) {
     var node = this.node();
     return fullname.local
