@@ -13,9 +13,9 @@ function attrRemoveNS(fullname) {
 }
 
 function attrConstant(name, value) {
-  console.log(name,value);
+  console.error(name,value);
   return function() {
-     console.log(name,value);
+     console.error(name,value);
     this.setAttribute(name, value);
   };
 }
@@ -44,7 +44,7 @@ function attrFunctionNS(fullname, value) {
 
 export default function(name, value) {
   var fullname = namespace(name);
-  console.log(name,value);
+  console.error(name,value);
   if (arguments.length < 2) {
     var node = this.node();
     return fullname.local
