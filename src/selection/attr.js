@@ -13,7 +13,9 @@ function attrRemoveNS(fullname) {
 }
 
 function attrConstant(name, value) {
+  console.log(name,value);
   return function() {
+     console.log(name,value);
     this.setAttribute(name, value);
   };
 }
